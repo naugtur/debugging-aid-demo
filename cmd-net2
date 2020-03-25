@@ -1,0 +1,5 @@
+#!/bin/bash
+clear
+echo '$ AID_MODULE=net node --require=debugging-aid/moduse ./demo-nets.js'
+echo ''
+AID_MODULE=net node --require=debugging-aid/moduse ./demo-nets.js 2>&1 | egrep --color '\[aid\]|^' 

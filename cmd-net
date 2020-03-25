@@ -1,0 +1,5 @@
+#!/bin/bash
+clear
+echo '$ node --async-stack-traces --require=debugging-aid/network.js ./demo-nets.js'
+echo ''
+node --async-stack-traces --require=debugging-aid/network.js ./demo-nets.js 2>&1 | egrep --color '\[aid\]|to:|node_modules/|^' 

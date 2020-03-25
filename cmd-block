@@ -1,0 +1,5 @@
+#!/bin/bash
+clear
+echo '$ node --require=debugging-aid/blocked ./demo-promises.js'
+echo ''
+node --require=debugging-aid/blocked ./demo-promises.js 2>&1 | egrep --color '\[aid\]|promise.js[0-9:]+|^' 

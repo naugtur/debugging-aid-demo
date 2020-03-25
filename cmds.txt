@@ -1,0 +1,6 @@
+node --require=debugging-aid/blocked ./demo-blocked.js
+
+AID_MODULE=net node --require=debugging-aid/moduse ./demo-nets.js
+node --async-stack-traces --require=debugging-aid/network.js ./demo-nets.js
+
+AID_HOOK_SCOPE='cases/promise' node --require=debugging-aid/hooks --trace-event-categories node.perf ./demo-hooks.js

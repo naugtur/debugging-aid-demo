@@ -1,0 +1,11 @@
+#!/bin/bash
+clear
+echo "$ AID_HOOK_SCOPE='cases/promise' \\"
+echo "node --require=debugging-aid/hooks --trace-event-categories node.perf ./demo-promises.js"
+echo ''
+AID_HOOK_SCOPE='cases/promise' node --require=debugging-aid/hooks --trace-event-categories node.perf ./demo-promises.js 2>&1 | egrep --color '└|^' 
+
+echo ''
+echo ''
+echo 'also, open chrome and load the node_trace*.log file into the UI of chrome://tracing'
+
